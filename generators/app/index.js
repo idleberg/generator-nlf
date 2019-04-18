@@ -79,7 +79,7 @@ module.exports = class extends Generator {
       {
         name: 'codePage',
         message: `Code page`,
-        default: answers => (languageData.languages[answers.language].codepage) ? languageData.languages[answers.language].codepage : '-' ,
+        default: answers => (languageData.languages[answers.language].code_page) ? languageData.languages[answers.language].code_page : '-' ,
         validate: number => ((Number.isInteger(parseInt(number)) && parseInt(number) > 0) || number === '-') ? true : 'Not a valid code page'
       },
       {
