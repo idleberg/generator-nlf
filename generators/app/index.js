@@ -74,13 +74,13 @@ module.exports = class extends Generator {
         name: 'fontSize',
         message: `Specify the Font Size (non-Latin languages only)`,
         default: answers => (languageData.languages[answers.language].font.size) ? languageData.languages[answers.language].font.size : '-' ,
-        validate: number => ((Number.isInteger(parseInt(number)) && parseInt(number) > 0) || '-') ? true : 'Not a valid font size'
+        validate: number => ((Number.isInteger(parseInt(number)) && parseInt(number) > 0) || number === '-') ? true : 'Not a valid font size'
       },
       {
         name: 'codePage',
         message: `Code page`,
         default: answers => (languageData.languages[answers.language].codepage) ? languageData.languages[answers.language].codepage : '-' ,
-        validate: number => ((Number.isInteger(parseInt(number)) && parseInt(number) > 0) || '-') ? true : 'Not a valid code page'
+        validate: number => ((Number.isInteger(parseInt(number)) && parseInt(number) > 0) || number === '-') ? true : 'Not a valid code page'
       },
       {
         name: 'rtl',
