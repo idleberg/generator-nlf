@@ -3,7 +3,7 @@
 [![npm](https://flat.badgen.net/npm/license/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
 [![npm](https://flat.badgen.net/npm/v/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/generator-nlf)](https://circleci.com/gh/idleberg/generator-nlf/)
-[![David](https://flat.badgen.net/david/dev/idleberg/generator-nlf)](https://david-dm.org/idleberg/generator-nlf)
+[![David](https://flat.badgen.net/david/dep/idleberg/generator-nlf)](https://david-dm.org/idleberg/generator-nlf)
 
 ## Description
 
