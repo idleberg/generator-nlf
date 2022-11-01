@@ -6,8 +6,10 @@
     "generators"
   ],
   "scripts": {
-    "ejslint": "ejslint generators/**/*.ejs",
-    "eslint": "eslint generators/**/*.js",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:ejs": "ejslint generators/**/*.ejs",
+    "lint:js": "eslint generators/**/*.js",
+    "prepare": "husky install",
     "test": "npm run eslint && npm run ejslint"
   },
   "keywords": [
@@ -31,7 +33,9 @@
   "devDependencies": {
     "ejs-lint": "^2.0.0",
     "eslint": "^8.26.0",
+    "eslint-plugin-json": "^3.1.0",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "npm-run-all2": "^6.0.2"
   }
 }
