@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "npm-run-all --parallel lint:*",
     "lint:ejs": "ejslint generators/**/*.ejs",
-    "lint:js": "eslint generators/**/*.js",
+    "lint:js": "eslint ./generators/**/*.js --ignore-path .gitignore",
     "prepare": "husky install",
     "test": "npm run eslint && npm run ejslint"
   },
