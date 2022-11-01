@@ -23,20 +23,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@nsis/language-data": "^0.7.1",
+    "@nsis/language-data": "^0.7.5",
     "pascal-case": "^2.0.1",
-    "update-notifier": "^3.0.0",
-    "yeoman-generator": "^4.0.0"
+    "update-notifier": "^3.0.1",
+    "yeoman-generator": "^4.13.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.1.0",
     "ejs-lint": "^0.3.0",
-    "eslint": "^6.1.0",
-    "husky": "^3.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
+    "eslint": "^6.8.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
   }
 }

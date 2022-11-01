@@ -2,9 +2,7 @@
 
 [![npm](https://flat.badgen.net/npm/license/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
 [![npm](https://flat.badgen.net/npm/v/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
-[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/generator-nlf)](https://circleci.com/gh/idleberg/generator-nlf/)
-[![David](https://flat.badgen.net/david/dep/idleberg/generator-nlf)](https://david-dm.org/idleberg/generator-nlf)
-
+[![CI](https://img.shields.io/github/workflow/status/idleberg/generator-nlf/CI?style=flat-square)](https://github.com/idleberg/generator-nlf/actions)
 ## Description
 
 A [Yeoman](http://yeoman.io/authoring/user-interactions.html) generator for NSIS Language Files (`.nlf`).
