@@ -1,6 +1,6 @@
 {
   "name": "generator-nlf",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Yeoman generator for NSIS Language Files (.nlf)",
   "author": "Jan T. Sott",
   "license": "MIT",
