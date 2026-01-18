@@ -67,7 +67,7 @@ module.exports = class extends Generator {
 				validate: (number) =>
 					Number.isInteger(Number.parseInt(number, 10)) && Number.parseInt(number, 10) > 0
 						? true
-						: 'Not a valid number of sections',
+						: 'Not a valid locale identifier (LCID)',
 			},
 			{
 				name: 'fontName',
