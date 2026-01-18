@@ -731,7 +731,7 @@ export default class extends Generator {
 	writing() {
 		this.answers.name = pascalCase(this.answers.name);
 
-		this.fs.copyTpl(this.templatePath('template.nlf.ejs'), this.destinationPath(`${this.answers.name}.nlf`), {
+		this.fs.copyTpl(this.templatePath('template.nlf.eta'), this.destinationPath(`${this.answers.name}.nlf`), {
 			pkg: props,
 		});
 	}

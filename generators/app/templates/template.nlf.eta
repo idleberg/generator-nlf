@@ -1,0 +1,189 @@
+# Header, don't edit
+NLF v6
+# Language ID
+<%= it.id %>
+# Font and size - dash (-) means default
+<%= it.fontName %>
+<%= it.fontSize %>
+# Codepage - dash (-) means ASCII code page
+<%= it.codePage %>
+# RTL - anything else than RTL means LTR
+<%= it.rtl %>
+# ^Branding
+<%= it.Branding %>
+# ^SetupCaption
+<%= it.SetupCaption %>
+# ^UninstallCaption
+<%= it.UninstallCaption %>
+# ^LicenseSubCaption
+<%= it.LicenseSubCaption %>
+# ^ComponentsSubCaption
+<%= it.ComponentsSubCaption %>
+# ^DirSubCaption
+<%= it.DirSubCaption %>
+# ^InstallingSubCaption
+<%= it.InstallingSubCaption %>
+# ^CompletedSubCaption
+<%= it.CompletedSubCaption %>
+# ^UnComponentsSubCaption
+<%= it.UnComponentsSubCaption %>
+# ^UnDirSubCaption
+<%= it.UnDirSubCaption %>
+# ^ConfirmSubCaption
+<%= it.ConfirmSubCaption %>
+# ^UninstallingSubCaption
+<%= it.UninstallingSubCaption %>
+# ^UnCompletedSubCaption
+<%= it.UnCompletedSubCaption %>
+# ^BackBtn
+<%= it.BackBtn %>
+# ^NextBtn
+<%= it.NextBtn %>
+# ^AgreeBtn
+<%= it.AgreeBtn %>
+# ^AcceptBtn
+<%= it.AcceptBtn %>
+# ^DontAcceptBtn
+<%= it.DontAcceptBtn %>
+# ^InstallBtn
+<%= it.InstallBtn %>
+# ^UninstallBtn
+<%= it.UninstallBtn %>
+# ^CancelBtn
+<%= it.CancelBtn %>
+# ^CloseBtn
+<%= it.CloseBtn %>
+# ^BrowseBtn
+<%= it.BrowseBtn %>
+# ^ShowDetailsBtn
+<%= it.ShowDetailsBtn %>
+# ^ClickNext
+<%= it.ClickNext %>
+# ^ClickInstall
+<%= it.ClickInstall %>
+# ^ClickUninstall
+<%= it.ClickUninstall %>
+# ^Name
+<%= it.Name %>
+# ^Completed
+<%= it.Completed %>
+# ^LicenseText
+<%= it.LicenseText %>
+# ^LicenseTextCB
+<%= it.LicenseTextCB %>
+# ^LicenseTextRB
+<%= it.LicenseTextRB %>
+# ^UnLicenseText
+<%= it.UnLicenseText %>
+# ^UnLicenseTextCB
+<%= it.UnLicenseTextCB %>
+# ^UnLicenseTextRB
+<%= it.UnLicenseTextRB %>
+# ^Custom
+<%= it.Custom %>
+# ^ComponentsText
+<%= it.ComponentsText %>
+# ^ComponentsSubText1
+<%= it.ComponentsSubText1 %>
+# ^ComponentsSubText2_NoInstTypes
+<%= it.ComponentsSubText2_NoInstTypes %>
+# ^ComponentsSubText2
+<%= it.ComponentsSubText2 %>
+# ^UnComponentsText
+<%= it.UnComponentsText %>
+# ^UnComponentsSubText1
+<%= it.UnComponentsSubText1 %>
+# ^UnComponentsSubText2_NoInstTypes
+<%= it.UnComponentsSubText2_NoInstTypes %>
+# ^UnComponentsSubText2
+<%= it.UnComponentsSubText2 %>
+# ^DirText
+<%= it.DirText %>
+# ^DirSubText
+<%= it.DirSubText %>
+# ^DirBrowseText
+<%= it.DirBrowseText %>
+# ^UnDirText
+<%= it.UnDirText %>
+# ^UnDirSubText
+<%= it.UnDirSubText %>
+# ^UnDirBrowseText
+<%= it.UnDirBrowseText %>
+# ^SpaceAvailable
+<%= it.SpaceAvailable %>
+# ^SpaceRequired
+<%= it.SpaceRequired %>
+# ^UninstallingText
+<%= it.UninstallingText %>
+# ^UninstallingSubText
+<%= it.UninstallingSubText %>
+# ^FileError
+<%= it.FileError %>
+# ^FileError_NoIgnore
+<%= it.FileError_NoIgnore %>
+# ^CantWrite
+<%= it.CantWrite %>
+# ^CopyFailed
+<%= it.CopyFailed %>
+# ^CopyTo
+<%= it.CopyTo %>
+# ^Registering
+<%= it.Registering %>
+# ^Unregistering
+<%= it.Unregistering %>
+# ^SymbolNotFound
+<%= it.SymbolNotFound %>
+# ^CouldNotLoad
+<%= it.CouldNotLoad %>
+# ^CreateFolder
+<%= it.CreateFolder %>
+# ^CreateShortcut
+<%= it.CreateShortcut %>
+# ^CreatedUninstaller
+<%= it.CreatedUninstaller %>
+# ^Delete
+<%= it.Delete %>
+# ^DeleteOnReboot
+<%= it.DeleteOnReboot %>
+# ^ErrorCreatingShortcut
+<%= it.ErrorCreatingShortcut %>
+# ^ErrorCreating
+<%= it.ErrorCreating %>
+# ^ErrorDecompressing
+<%= it.ErrorDecompressing %>
+# ^ErrorRegistering
+<%= it.ErrorRegistering %>
+# ^ExecShell
+<%= it.ExecShell %>
+# ^Exec
+<%= it.Exec %>
+# ^Extract
+<%= it.Extract %>
+# ^ErrorWriting
+<%= it.ErrorWriting %>
+# ^InvalidOpcode
+<%= it.InvalidOpcode %>
+# ^NoOLE
+<%= it.NoOLE %>
+# ^OutputFolder
+<%= it.OutputFolder %>
+# ^RemoveFolder
+<%= it.RemoveFolder %>
+# ^RenameOnReboot
+<%= it.RenameOnReboot %>
+# ^Rename
+<%= it.Rename %>
+# ^Skipped
+<%= it.Skipped %>
+# ^CopyDetails
+<%= it.CopyDetails %>
+# ^LogInstall
+<%= it.LogInstall %>
+# ^Byte
+<%= it.Byte %>
+# ^Kilo
+ <%= it.Kilo %>
+# ^Mega
+ <%= it.Mega %>
+# ^Giga
+ <%= it.Giga %>
