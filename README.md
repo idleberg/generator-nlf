@@ -1,8 +1,9 @@
 # generator-nlf
 
-[![npm](https://flat.badgen.net/npm/license/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
-[![npm](https://flat.badgen.net/npm/v/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
-[![CI](https://img.shields.io/github/workflow/status/idleberg/generator-nlf/CI?style=flat-square)](https://github.com/idleberg/generator-nlf/actions)
+[![License](https://img.shields.io/github/license/idleberg/generator-nlf?color=blue&style=for-the-badge)](https://github.com/idleberg/generator-nlf/blob/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/generator-nlf?style=for-the-badge)](https://www.npmjs.org/package/generator-nlf)
+[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/generator-nlf/default.yml?style=for-the-badge)](https://github.com/idleberg/generator-nlf/actions)
+
 ## Description
 
 A [Yeoman](http://yeoman.io/authoring/user-interactions.html) generator for NSIS Language Files (`.nlf`).
@@ -12,7 +13,7 @@ A [Yeoman](http://yeoman.io/authoring/user-interactions.html) generator for NSIS
 You need [Node.js](https://nodejs.org/en/) installed and available in your `PATH` [environmental variable](http://superuser.com/a/284351/195953). Use your preferred Node package manager to install the Yeoman CLI tool.
 
 ```sh
-yarn global add yo || npm install -g yo
+npm install --global yo
 ```
 
 ## Installation
@@ -20,7 +21,7 @@ yarn global add yo || npm install -g yo
  Use your preferred package manager to install this generator
 
 ```sh
-yarn global add generator-nlf || npm i generator-nlf -g
+npm install --global generator-nlf
 ```
 
 ## Usage
@@ -39,4 +40,4 @@ yo nlf
 
 ## License
 
-This work is licensed under the [MIT License](https://opensource.org/licenses/MIT)
+This work is licensed under the [MIT License](LICENSE).
