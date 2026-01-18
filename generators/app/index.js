@@ -64,10 +64,10 @@ module.exports = class extends Generator {
 				name: 'id',
 				message: 'Specify the locale identifier (LCID)',
 				default: (answers) => languageData.languages[answers.language].id,
-				validate: (number) =>
-					Number.isInteger(Number.parseInt(number, 10)) && Number.parseInt(number, 10) > 0
-						? true
-						: 'Not a valid locale identifier (LCID)',
+				validate: (number) => {
+					const parsed = Number.parseInt(number, 10);
+					return Number.isInteger(parsed) && parsed > 0 ? true : 'Not a valid locale identifier (LCID)';
+				},
 			},
 			{
 				name: 'fontName',
@@ -80,20 +80,22 @@ module.exports = class extends Generator {
 				message: 'Specify the Font Size (non-Latin languages only)',
 				default: (answers) =>
 					languageData.languages[answers.language].font.size ? languageData.languages[answers.language].font.size : '-',
-				validate: (number) =>
-					(Number.isInteger(Number.parseInt(number, 10)) && Number.parseInt(number, 10) > 0) || number === '-'
-						? true
-						: 'Not a valid font size',
+				validate: (number) => {
+					if (number === '-') return true;
+					const parsed = Number.parseInt(number, 10);
+					return Number.isInteger(parsed) && parsed > 0 ? true : 'Not a valid font size';
+				},
 			},
 			{
 				name: 'codePage',
 				message: 'Code page',
 				default: (answers) =>
 					languageData.languages[answers.language].code_page ? languageData.languages[answers.language].code_page : '-',
-				validate: (number) =>
-					(Number.isInteger(Number.parseInt(number, 10)) && Number.parseInt(number, 10) > 0) || number === '-'
-						? true
-						: 'Not a valid code page',
+				validate: (number) => {
+					if (number === '-') return true;
+					const parsed = Number.parseInt(number, 10);
+					return Number.isInteger(parsed) && parsed > 0 ? true : 'Not a valid code page';
+				},
 			},
 			{
 				name: 'rtl',
