@@ -1,49 +1,50 @@
 {
-  "name": "generator-nlf",
-  "version": "0.2.0",
-  "description": "Yeoman generator for NSIS Language Files (.nlf)",
-  "author": "Jan T. Sott",
-  "license": "MIT",
-  "keywords": [
-    "yeoman-generator",
-    "nsis",
-    "nlf",
-    "nullsoft"
-  ],
-  "main": "generators/app",
-  "files": [
-    "generators"
-  ],
-  "scripts": {
-    "lint": "npm-run-all --parallel lint:*",
-    "lint:ejs": "ejslint generators/**/*.ejs",
-    "lint:js": "eslint ./generators/**/*.js --ignore-path .gitignore",
-    "prepare": "husky install",
-    "test": "npm run lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/idleberg/generator-nlf"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {
-    "@nsis/language-data": "^0.9.0",
-    "pascal-case": "^3.1.2",
-    "update-notifier": "^3.0.1",
-    "yeoman-generator": "^5.7.0"
-  },
-  "devDependencies": {
-    "ejs-lint": "^2.0.0",
-    "eslint": "^8.26.0",
-    "eslint-plugin-json": "^3.1.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "npm-run-all2": "^6.0.2"
-  },
-  "lint-staged": {
-    "*.ejs": "ejslint",
-    "*.(js|json)": "eslint --cache --fix"
-  }
+	"name": "generator-nlf",
+	"version": "0.2.0",
+	"description": "Yeoman generator for NSIS Language Files (.nlf)",
+	"author": "Jan T. Sott",
+	"license": "MIT",
+	"keywords": [
+		"yeoman-generator",
+		"nsis",
+		"nlf",
+		"nullsoft"
+	],
+	"main": "generators/app",
+	"files": [
+		"generators"
+	],
+	"scripts": {
+		"lint:e18e": "e18e-cli analyze",
+		"lint:code": "biome check",
+		"lint": "concurrently --prefix '{name}' -c 'green,blue' 'npm:lint:*'",
+		"prepare": "lefthook install",
+		"publish:npm": "np --no-yarn",
+		"test": "echo \"No tests specified\" && exit 0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/idleberg/generator-nlf"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"dependencies": {
+		"@nsis/language-data": "^0.9.0",
+		"pascal-case": "^3.1.2",
+		"update-notifier": "^3.0.1",
+		"yeoman-generator": "^5.7.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
+		"@idleberg/configs": "^0.4.1",
+		"@types/node": "^24.10.4",
+		"@types/yeoman-assert": "^3.1.4",
+		"@yeoman/adapter": "^4.0.1",
+		"@yeoman/types": "^1.8.0",
+		"concurrently": "^9.2.1",
+		"np": "^10.2.0"
+	},
+	"packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48"
 }

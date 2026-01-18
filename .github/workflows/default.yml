@@ -1,50 +1,44 @@
-name: CI
+name: "Run tests on NodeJS"
 
 on:
   push:
     paths:
-    - 'generators/**'
-    - 'package.json'
-    - 'pnpm-lock.yaml'
+      - ".github/**"
+      - "generators/**"
+      - "lib/**"
+      - "tests/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "vitest.config.ts"
   pull_request:
-      paths:
-      - 'generators/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
+  workflow_dispatch:
 
 jobs:
   default:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['lts/*', '*']
+        node-version: ["lts/*", "*"]
         os: [ubuntu-latest]
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
       - name: Get pnpm store directory
-        id: pnpm-cache
+        shell: bash
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -53,7 +47,7 @@ jobs:
         run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
       - name: Lint Source
-        run: pnpm run --if-present lint
+        run: pnpm exec biome ci
 
       - name: Build Source
         run: pnpm run --if-present build
