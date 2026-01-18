@@ -40,4 +40,4 @@ yo nlf
 
 ## License
 
-This work is licensed under the [MIT License](https://opensource.org/licenses/MIT)
+This work is licensed under the [MIT License](LICENSE).
