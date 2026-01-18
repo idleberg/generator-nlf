@@ -1,8 +1,9 @@
 # generator-nlf
 
-[![npm](https://flat.badgen.net/npm/license/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
-[![npm](https://flat.badgen.net/npm/v/generator-nlf)](https://www.npmjs.org/package/generator-nlf)
-[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/generator-nlf/default.yml?style=flat-square)](https://github.com/idleberg/generator-nlf/actions)
+[![License](https://img.shields.io/github/license/idleberg/generator-nlf?color=blue&style=for-the-badge)](https://github.com/idleberg/generator-nlf/blob/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/generator-nlf?style=for-the-badge)](https://www.npmjs.org/package/generator-nlf)
+[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/generator-nlf/default.yml?style=for-the-badge)](https://github.com/idleberg/generator-nlf/actions)
+
 ## Description
 
 A [Yeoman](http://yeoman.io/authoring/user-interactions.html) generator for NSIS Language Files (`.nlf`).
