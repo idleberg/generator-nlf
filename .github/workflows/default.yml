@@ -1,5 +1,8 @@
 name: "Run tests on NodeJS"
 
+permissions:
+  contents: write
+
 on:
   push:
     paths:
@@ -16,6 +19,8 @@ on:
 jobs:
   default:
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
     strategy:
       matrix:
         node-version: ["lts/*", "*"]
