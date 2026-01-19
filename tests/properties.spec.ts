@@ -1,3 +1,4 @@
+import { pascalCase } from 'change-case';
 import { beforeAll, describe, test } from 'vitest';
 import assert from 'yeoman-assert';
 import type { PromptAnswers } from 'yeoman-generator';
@@ -76,16 +77,18 @@ describe('RTL property', () => {
 
 describe('font properties', () => {
 	const fontConfigs = [
-		{ name: 'Arial', size: '10' },
-		{ name: 'MS Sans Serif', size: '8' },
-		{ name: 'ＭＳ Ｐゴシック', size: '9' },
+		{ name: 'Arial', size: '10', testName: 'Font Test Arial' },
+		{ name: 'MS Sans Serif', size: '8', testName: 'Font Test Sans' },
+		{ name: 'ＭＳ Ｐゴシック', size: '9', testName: 'Font Test Gothic' },
 	];
 
-	fontConfigs.forEach(({ name: fontName, size }) => {
+	fontConfigs.forEach(({ name: fontName, size, testName }) => {
 		describe(`with font ${fontName} size ${size}`, () => {
+			const expectedFileName = `${pascalCase(testName)}.nlf`;
+
 			beforeAll(async () => {
 				await helper({
-					name: 'Font Test',
+					name: testName,
 					language: 'English',
 					id: '1033',
 					fontName,
@@ -97,24 +100,31 @@ describe('font properties', () => {
 			});
 
 			test('includes font name in output', () => {
-				assert.fileContent('FontTest.nlf', fontName);
+				assert.fileContent(expectedFileName, fontName);
 			});
 
 			test('includes font size in output', () => {
-				assert.fileContent('FontTest.nlf', new RegExp(`${fontName.replace(/[()]/g, '\\$&')}\\n${size}`));
+				assert.fileContent(expectedFileName, new RegExp(`${fontName.replace(/[()]/g, '\\$&')}\\n${size}`));
 			});
 		});
 	});
 });
 
 describe('codePage property', () => {
-	const codePages = ['1252', '1256', '932', '65001'];
+	const codePages = [
+		{ codePage: '1252', testName: 'CodePage Test 1252' },
+		{ codePage: '1256', testName: 'CodePage Test 1256' },
+		{ codePage: '932', testName: 'CodePage Test 932' },
+		{ codePage: '65001', testName: 'CodePage Test 65001' },
+	];
 
-	codePages.forEach((codePage) => {
+	codePages.forEach(({ codePage, testName }) => {
 		describe(`with codePage ${codePage}`, () => {
+			const expectedFileName = `${pascalCase(testName)}.nlf`;
+
 			beforeAll(async () => {
 				await helper({
-					name: 'CodePage Test',
+					name: testName,
 					language: 'English',
 					id: '1033',
 					fontName: '-',
@@ -127,7 +137,7 @@ describe('codePage property', () => {
 
 			test(`includes codePage ${codePage} in output`, () => {
 				assert.fileContent(
-					'CodePageTest.nlf',
+					expectedFileName,
 					new RegExp(`# Codepage - dash \\(-\\) means ASCII code page\\n${codePage}`),
 				);
 			});
