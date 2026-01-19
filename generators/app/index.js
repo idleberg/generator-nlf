@@ -1,6 +1,8 @@
 import { GeneratorCompat as Generator } from '@idleberg/yeoman-generator';
 import { languages } from '@nsis/language-data';
-import { pascalCase } from 'pascal-case';
+import slugify from '@sindresorhus/slugify';
+import { pascalCase } from 'change-case';
+import { inverse } from 'kleur/colors';
 
 export default class extends Generator {
 	constructor(args, opts) {
@@ -21,6 +23,10 @@ export default class extends Generator {
 	}
 
 	async prompting() {
+		console.log(/* let it breathe */);
+
+		this.clack.intro(inverse(` ${slugify(this.appname)} `));
+
 		const answers = await this.prompt([
 			{
 				name: 'name',
@@ -715,9 +721,12 @@ export default class extends Generator {
 
 	writing() {
 		this.answers.name = pascalCase(this.answers.name);
+		this.answers.rtl = this.answers.rtl ? 'RTL' : false;
 
-		this.fs.copyTpl(this.templatePath('template.nlf.eta'), this.destinationPath(`${this.answers.name}.nlf`), {
-			pkg: props,
-		});
+		this.fs.copyTpl(
+			this.templatePath('template.nlf.eta'),
+			this.destinationPath(`${this.answers.name}.nlf`),
+			this.answers,
+		);
 	}
 }
