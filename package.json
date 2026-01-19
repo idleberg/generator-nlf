@@ -28,7 +28,7 @@
 		"url": "git+https://github.com/idleberg/generator-nlf.git"
 	},
 	"engines": {
-		"node": ">=14.0.0"
+		"node": ">=20.0.0"
 	},
 	"dependencies": {
 		"@idleberg/yeoman-generator": "^0.1.1",
