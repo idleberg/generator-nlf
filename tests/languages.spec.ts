@@ -22,16 +22,16 @@ languagesToTest.forEach(({ key, name }) => {
 			await helper({
 				name,
 				language: key,
-				id: String((langData as any).id),
-				fontName: (langData as any).font.name || '-',
-				fontSize: (langData as any).font.size ? String((langData as any).font.size) : '-',
-				codePage: (langData as any).code_page ? String((langData as any).code_page) : '-',
-				rtl: (langData as any).rtl,
+				id: String(langData.id),
+				fontName: langData.font.name || '-',
+				fontSize: langData.font.size ? String(langData.font.size) : '-',
+				codePage: langData.code_page ? String(langData.code_page) : '-',
+				rtl: langData.rtl,
 				translateStrings: true,
 				// Include some string translations
-				Branding: (langData as any).strings.Branding,
-				SetupCaption: (langData as any).strings.SetupCaption,
-				BackBtn: (langData as any).strings.BackBtn,
+				Branding: langData.strings.Branding,
+				SetupCaption: langData.strings.SetupCaption,
+				BackBtn: langData.strings.BackBtn,
 			} as PromptAnswers);
 		});
 
@@ -39,12 +39,12 @@ languagesToTest.forEach(({ key, name }) => {
 			assert.file(`${expectedFileName}.nlf`);
 		});
 
-		test(`includes correct language ID (${(langData as any).id})`, () => {
-			assert.fileContent(`${expectedFileName}.nlf`, String((langData as any).id));
+		test(`includes correct language ID (${langData.id})`, () => {
+			assert.fileContent(`${expectedFileName}.nlf`, String(langData.id));
 		});
 
 		test('includes correct RTL setting', () => {
-			const rtlValue = (langData as any).rtl ? 'RTL' : 'false';
+			const rtlValue = langData.rtl ? 'RTL' : 'false';
 			assert.fileContent(
 				`${expectedFileName}.nlf`,
 				new RegExp(`# RTL - anything else than RTL means LTR\\n${rtlValue}`),
@@ -52,11 +52,11 @@ languagesToTest.forEach(({ key, name }) => {
 		});
 
 		test('includes translated string (Branding)', () => {
-			assert.fileContent(`${expectedFileName}.nlf`, (langData as any).strings.Branding);
+			assert.fileContent(`${expectedFileName}.nlf`, langData.strings.Branding);
 		});
 
 		test('includes translated string (SetupCaption)', () => {
-			assert.fileContent(`${expectedFileName}.nlf`, (langData as any).strings.SetupCaption);
+			assert.fileContent(`${expectedFileName}.nlf`, langData.strings.SetupCaption);
 		});
 	});
 });
