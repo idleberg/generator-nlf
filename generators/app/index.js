@@ -33,7 +33,9 @@ export default class extends Generator {
 				message: "What's the name of the language?",
 				store: true,
 				validate: (name) =>
-					name?.trim().length > 0 && /^[a-zA-Z ]+$/.test(name) ? true : 'Specify a valid language name',
+					name?.trim().length > 0 && /^[\p{L}\s]+$/u.test(name)
+						? true
+						: 'Specify a valid language name',
 			},
 			{
 				name: 'language',
