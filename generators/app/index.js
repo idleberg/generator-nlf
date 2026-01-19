@@ -12,29 +12,12 @@ export default class extends Generator {
 	}
 
 	languageChoices() {
-		const languageChoices = [];
-
-		Object.entries(languages).forEach(([key, value]) => {
-			// Use long names
-			languageChoices.push({
+		return Object.entries(languages)
+			.map(([key, value]) => ({
 				name: value.long || key,
 				value: key,
-			});
-		});
-
-		// Sort names
-		languageChoices.sort((a, b) => {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-
-			return 0;
-		});
-
-		return languageChoices;
+			}))
+			.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
 	async prompting() {
@@ -57,7 +40,7 @@ export default class extends Generator {
 			{
 				name: 'id',
 				message: 'Specify the locale identifier (LCID)',
-				default: (answers) => languages[answers.language].id,
+				default: (answers) => String(languages[answers.language].id),
 				validate: (number) => {
 					const parsed = Number.parseInt(number, 10);
 					return Number.isInteger(parsed) && parsed > 0 ? true : 'Not a valid locale identifier (LCID)';
@@ -71,7 +54,8 @@ export default class extends Generator {
 			{
 				name: 'fontSize',
 				message: 'Specify the Font Size (non-Latin languages only)',
-				default: (answers) => (languages[answers.language].font.size ? languages[answers.language].font.size : '-'),
+				default: (answers) =>
+					languages[answers.language].font.size ? String(languages[answers.language].font.size) : '-',
 				validate: (number) => {
 					if (number === '-') return true;
 					const parsed = Number.parseInt(number, 10);
@@ -81,7 +65,8 @@ export default class extends Generator {
 			{
 				name: 'codePage',
 				message: 'Code page',
-				default: (answers) => (languages[answers.language].code_page ? languages[answers.language].code_page : '-'),
+				default: (answers) =>
+					languages[answers.language].code_page ? String(languages[answers.language].code_page) : '-',
 				validate: (number) => {
 					if (number === '-') return true;
 					const parsed = Number.parseInt(number, 10);
