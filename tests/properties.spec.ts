@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto';
 import { beforeAll, describe, test } from 'vitest';
 import assert from 'yeoman-assert';
 import type { PromptAnswers } from 'yeoman-generator';
@@ -83,9 +84,11 @@ describe('font properties', () => {
 
 	fontConfigs.forEach(({ name: fontName, size }) => {
 		describe(`with font ${fontName} size ${size}`, () => {
+			const outFile = randomUUID().split('-').at(0);
+
 			beforeAll(async () => {
 				await helper({
-					name: 'Font Test',
+					name: outFile,
 					language: 'English',
 					id: '1033',
 					fontName,
@@ -97,11 +100,11 @@ describe('font properties', () => {
 			});
 
 			test('includes font name in output', () => {
-				assert.fileContent('FontTest.nlf', fontName);
+				assert.fileContent(`${outFile}.nlf`, fontName);
 			});
 
 			test('includes font size in output', () => {
-				assert.fileContent('FontTest.nlf', new RegExp(`${fontName.replace(/[()]/g, '\\$&')}\\n${size}`));
+				assert.fileContent(`${outFile}.nlf`, new RegExp(`${fontName.replace(/[()]/g, '\\$&')}\\n${size}`));
 			});
 		});
 	});
@@ -112,9 +115,11 @@ describe('codePage property', () => {
 
 	codePages.forEach((codePage) => {
 		describe(`with codePage ${codePage}`, () => {
+			const outFile = randomUUID().split('-').at(0);
+
 			beforeAll(async () => {
 				await helper({
-					name: 'CodePage Test',
+					name: outFile,
 					language: 'English',
 					id: '1033',
 					fontName: '-',
@@ -127,7 +132,7 @@ describe('codePage property', () => {
 
 			test(`includes codePage ${codePage} in output`, () => {
 				assert.fileContent(
-					'CodePageTest.nlf',
+					`${outFile}.nlf`,
 					new RegExp(`# Codepage - dash \\(-\\) means ASCII code page\\n${codePage}`),
 				);
 			});
