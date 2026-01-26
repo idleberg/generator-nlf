@@ -1,8 +1,8 @@
+import type { PromptAnswers } from '@idleberg/yeoman-generator';
 import { languages } from '@nsis/language-data';
 import { pascalCase } from 'change-case';
 import { beforeAll, describe, test } from 'vitest';
 import assert from 'yeoman-assert';
-import type { PromptAnswers } from 'yeoman-generator';
 import { helper } from './helper.ts';
 
 // Test a representative subset of languages with different characteristics
