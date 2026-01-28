@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@idleberg/yeoman-generator':
-        specifier: ^0.1.3
-        version: 0.1.3(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(eta@4.5.0)(mem-fs@4.1.3)
+        specifier: ^0.1.4
+        version: 0.1.4(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(eta@4.5.0)(mem-fs@4.1.3)
       '@nsis/language-data':
         specifier: ^0.9.0
         version: 0.9.3
@@ -602,8 +602,8 @@ packages:
   '@idleberg/configs@0.4.1':
     resolution: {integrity: sha512-oLVZPHOrhgxdeXsxukD1vB30eDkF0UidfhthsBBKksF7GM0lhQNTWNThsJojrazI/0OZV9giQCeVxsm3/cUK0Q==}
 
-  '@idleberg/yeoman-generator@0.1.3':
-    resolution: {integrity: sha512-TEBB6bEdDAus/IKOqj8fK+23eu7HwCyxCGrxYbv3zSMpzZJNEuD/hSG4lh7ee5/o/5UMAmCWIZMtA8w4C6/tlQ==}
+  '@idleberg/yeoman-generator@0.1.4':
+    resolution: {integrity: sha512-/t63/22kTqNOe5qHOgjCEIihaXWUQIM1CKJ0yhAHYnX5Tsj8hf/A1kZruPmUNytoqh8qZhcNyMdBaVv+xLtW0w==}
     engines: {node: '>=20'}
     peerDependencies:
       '@clack/prompts': ^0.11.0
@@ -2633,8 +2633,8 @@ packages:
     resolution: {integrity: sha512-tmPX422rYgofd4epzrNoOXiE8XFZYOcCq1vD7MAXCDO+O+zndlA2ztdKKMa+EeuBG5tHETpr4ml4RGgpqDCCAg==}
     engines: {node: '>= 0.10.5'}
 
-  node-gyp@12.1.0:
-    resolution: {integrity: sha512-W+RYA8jBnhSr2vrTtlPYPc1K+CSjGpVDRZxcqJcERZ8ND3A1ThWPHRwctTx3qC3oW99jt726jhdz3Y6ky87J4g==}
+  node-gyp@12.2.0:
+    resolution: {integrity: sha512-q23WdzrQv48KozXlr0U1v9dwO/k59NHeSzn6loGcasyf0UnSrtzs8kRxM+mfwJSf0DkX0s43hcqgnSO4/VNthQ==}
     engines: {node: ^20.17.0 || >=22.9.0}
     hasBin: true
 
@@ -2816,8 +2816,8 @@ packages:
   package-manager-detector@1.6.0:
     resolution: {integrity: sha512-61A5ThoTiDG/C8s8UMZwSorAGwMJ0ERVGj2OjoW5pAalsNOg15+iQiPzrLJ4jhZ1HJzmC2PIHT2oEiH3R5fzNA==}
 
-  pacote@21.0.4:
-    resolution: {integrity: sha512-RplP/pDW0NNNDh3pnaoIWYPvNenS7UqMbXyvMqJczosiFWTeGGwJC2NQBLqKf4rGLFfwCOnntw1aEp9Jiqm1MA==}
+  pacote@21.1.0:
+    resolution: {integrity: sha512-WF/PwrImIIVaLmtuCeO5L7n6DA0ZGCqmDPO/XbNjZgNUX+2O5z4f4Wdmu6erBWNICkl3ftKJvit2eIVcpegRRw==}
     engines: {node: ^20.17.0 || >=22.9.0}
     hasBin: true
 
@@ -3317,8 +3317,8 @@ packages:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
     engines: {node: '>=20'}
 
-  tar@7.5.6:
-    resolution: {integrity: sha512-xqUeu2JAIJpXyvskvU3uvQW8PAmHrtXp2KDuMJwQqW8Sqq0CaZBAQ+dKS3RBXVhU4wC5NjAdKrmh84241gO9cA==}
+  tar@7.5.7:
+    resolution: {integrity: sha512-fov56fJiRuThVFXD6o6/Q354S7pnWMJIVlDBYijsTNx6jKSE4pvrDTs6lUnmGvNyfJwFQQwWy3owKz1ucIhveQ==}
     engines: {node: '>=18'}
 
   teex@1.0.1:
@@ -3642,8 +3642,8 @@ packages:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
 
-  yeoman-adapter-clack@0.1.2:
-    resolution: {integrity: sha512-nP9xYCBLmEUmwYIo9+b7ZBUfOxW+AAKseqx/HnXPvID+4u1qD6ik8W4K4ucZHLO4aBvJueYIEFO0Q3gNxbGlHg==}
+  yeoman-adapter-clack@0.2.1:
+    resolution: {integrity: sha512-bzEnkJoYPHHnUOdIys2le+j+vL86EPFFJjL4lJRSFnFTseFR09x584RLM6165KaYzUZaBFAOw2OZIxufhFskgg==}
     engines: {node: '>=20'}
     peerDependencies:
       '@clack/prompts': ^0.11.0
@@ -4263,7 +4263,7 @@ snapshots:
       - picomatch
       - supports-color
 
-  '@idleberg/yeoman-generator@0.1.3(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(eta@4.5.0)(mem-fs@4.1.3)':
+  '@idleberg/yeoman-generator@0.1.4(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(eta@4.5.0)(mem-fs@4.1.3)':
     dependencies:
       '@clack/prompts': 1.0.0-alpha.9
       '@yeoman/adapter': 4.0.1(@types/node@24.10.9)
@@ -4272,7 +4272,7 @@ snapshots:
       is-binary-path: 3.0.0
       kleur: 4.1.5
       mem-fs-editor: 11.1.4(mem-fs@4.1.3)
-      yeoman-adapter-clack: 0.1.2(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(mem-fs@4.1.3)
+      yeoman-adapter-clack: 0.2.1(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(mem-fs@4.1.3)
       yeoman-environment: 5.1.2(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(mem-fs@4.1.3)
       yeoman-generator: 7.5.1(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(mem-fs@4.1.3)
     transitivePeerDependencies:
@@ -4492,7 +4492,7 @@ snapshots:
       npm-package-arg: 13.0.2
       npm-pick-manifest: 11.0.3
       npm-registry-fetch: 19.1.1
-      pacote: 21.0.4
+      pacote: 21.1.0
       parse-conflict-json: 5.0.1
       proc-log: 6.1.0
       proggy: 4.0.0
@@ -4536,7 +4536,7 @@ snapshots:
     dependencies:
       cacache: 20.0.3
       json-parse-even-better-errors: 5.0.0
-      pacote: 21.0.4
+      pacote: 21.1.0
       proc-log: 6.1.0
       semver: 7.7.3
     transitivePeerDependencies:
@@ -4571,7 +4571,7 @@ snapshots:
       '@npmcli/node-gyp': 5.0.0
       '@npmcli/package-json': 7.0.4
       '@npmcli/promise-spawn': 9.0.1
-      node-gyp: 12.1.0
+      node-gyp: 12.2.0
       proc-log: 6.1.0
       which: 6.0.0
     transitivePeerDependencies:
@@ -6265,7 +6265,7 @@ snapshots:
     dependencies:
       minimatch: 3.1.2
 
-  node-gyp@12.1.0:
+  node-gyp@12.2.0:
     dependencies:
       env-paths: 2.2.1
       exponential-backoff: 3.1.3
@@ -6274,7 +6274,7 @@ snapshots:
       nopt: 9.0.0
       proc-log: 6.1.0
       semver: 7.7.3
-      tar: 7.5.6
+      tar: 7.5.7
       tinyglobby: 0.2.15
       which: 6.0.0
     transitivePeerDependencies:
@@ -6521,7 +6521,7 @@ snapshots:
 
   package-manager-detector@1.6.0: {}
 
-  pacote@21.0.4:
+  pacote@21.1.0:
     dependencies:
       '@npmcli/git': 7.0.1
       '@npmcli/installed-package-contents': 4.0.0
@@ -6539,7 +6539,7 @@ snapshots:
       promise-retry: 2.0.1
       sigstore: 4.1.0
       ssri: 13.0.0
-      tar: 7.5.6
+      tar: 7.5.7
     transitivePeerDependencies:
       - supports-color
 
@@ -7022,7 +7022,7 @@ snapshots:
 
   tagged-tag@1.0.0: {}
 
-  tar@7.5.6:
+  tar@7.5.7:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
@@ -7318,7 +7318,7 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 21.1.1
 
-  yeoman-adapter-clack@0.1.2(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(mem-fs@4.1.3):
+  yeoman-adapter-clack@0.2.1(@clack/prompts@1.0.0-alpha.9)(@types/node@24.10.9)(@yeoman/types@1.9.1(@types/node@24.10.9)(@yeoman/adapter@4.0.1(@types/node@24.10.9))(mem-fs-editor@11.1.4(mem-fs@4.1.3))(mem-fs@4.1.3))(mem-fs@4.1.3):
     dependencies:
       '@clack/prompts': 1.0.0-alpha.9
       '@yeoman/adapter': 4.0.1(@types/node@24.10.9)
