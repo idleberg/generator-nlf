@@ -1,8 +1,8 @@
 import { GeneratorCompat as Generator } from '@idleberg/yeoman-generator';
 import { languages } from '@nsis/language-data';
-import slugify from '@sindresorhus/slugify';
 import { pascalCase } from 'change-case';
 import { inverse } from 'kleur/colors';
+import $ from '../../package.json' with { type: 'json' };
 
 export default class extends Generator {
 	constructor(args, opts) {
@@ -25,7 +25,7 @@ export default class extends Generator {
 	async prompting() {
 		console.log(/* let it breathe */);
 
-		this.clack.intro(inverse(` ${slugify(this.appname)} `));
+		this.clack.intro(inverse(` ${$.name} `));
 
 		const answers = await this.prompt([
 			{
