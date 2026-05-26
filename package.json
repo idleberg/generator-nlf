@@ -30,7 +30,7 @@
 		"node": ">=20.0.0"
 	},
 	"dependencies": {
-		"@idleberg/yeoman-generator": "^0.3.0",
+		"@idleberg/yeoman-generator": "^0.3.1",
 		"@nsis/language-data": "^0.11.0",
 		"@sindresorhus/slugify": "^3.0.0",
 		"change-case": "^5.4.4",
@@ -39,7 +39,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^21.0.1",
 		"@commitlint/config-conventional": "^21.0.1",
-		"@idleberg/configs": "^0.4.2",
+		"@idleberg/configs": "^0.4.4",
 		"@types/node": "^24.10.4",
 		"@types/yeoman-assert": "^3.1.4",
 		"@yeoman/adapter": "^4.0.2",
@@ -47,7 +47,7 @@
 		"concurrently": "^9.2.1",
 		"np": "^11.2.1",
 		"typescript": "^6.0.3",
-		"vitest": "^4.1.6",
+		"vitest": "^4.1.7",
 		"yeoman-assert": "^3.1.1",
 		"yeoman-test": "^11.5.2"
 	},
